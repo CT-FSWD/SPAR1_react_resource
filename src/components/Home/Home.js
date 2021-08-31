@@ -1,5 +1,5 @@
 //This component will act as the unique content for the home 'page' in our application.
-//Step 10 - Create the component and render with the Banner and Intro
+//Step 10 - Components - Create the component and render with the Banner and Intro
 import React from 'react'
 import './Home.css'
 //Imported images
@@ -9,6 +9,10 @@ import introImage from '../../images/react-cool-portal.jpeg'
 //Components to import
 import Intro from '../Intro'
 import Banner from '../Banner'
+//Step 13 - Components - import and render the ComparisonGallery component
+import ComparisonGallery from './ComparisonGallery'
+//Step 15 - Components - import and render the Graphic component
+import Graphic from './Graphic'
 
 export default function Home() {
     return (
@@ -29,6 +33,8 @@ export default function Home() {
                     url="https://reactjs.org"
                     linkText="See React Documentation"
                     />
+                    <ComparisonGallery />
+                    <Graphic/>
             </main>
         </section>
             )
