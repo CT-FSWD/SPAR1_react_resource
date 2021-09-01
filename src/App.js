@@ -16,6 +16,8 @@ import Home from './components/Home/Home'
 //Step 17 - Components - import and render the Footer component
 import Footer from './components/Footer'
 
+import SupportingTech from './components/SupportingTech/SupportingTech'
+
 //The export keyword below makes the App component accessible in other files in this application. Think of export much like the public keyword in a C# class.
 export default function App() {
   //Step 18 - Components - create the hook, callback function, and add the callback function as a prop in the Header component below.
@@ -27,8 +29,9 @@ export default function App() {
   const handleContentCallback = (callback) => {
     setShowContent(callback);
   }
+  //Each component will have a return that describes what the component will display to the Virtual DOM.
   return (
-    //In the return for a functional component, we render the UI for a specific portion of content. Think of the App component much like the MVC Layout. Items that we want to display across an entire website should be located here. Each 'page' of content will be located inside of its own component tree, and we will decide which component in the tree to render as the user interacts with the nav on the site.
+    //In the return for a functional component, we render the UI for a specific portion of content. Think of the App component much like the MVC Layout. Items that we want to display across an entire website should be located here. Each 'page' of content will be located inside of its own component tree, and we will decide which component in the tree to render as the user interacts with the nav on the site. Think of the other components in the tree much like individual views that create just a portion of the UI.
     <div className="site-container">
       {/* This is a JSX comment nested inside of a JSX expression. Anytime we need to call to a dynamic variable (prop or state data), we will use curly braces to display the information in the UI.
        - JSX - JavaScript and XML is an HTML-like syntax that we can use to write HTML structures directly into JS code. The browser uses Babel to then transpile our JSX code into JS so it can interpret what to render.
@@ -36,6 +39,7 @@ export default function App() {
        NOTE: The use of className above...since we working in JS we use the term className rather than just class in JSX.
       */}
       {/* Render v1: <h1>Hello from the app component!</h1> */}
+      {/* Below we call the Header component to display its piece of the UI. */}
       <Header handleContentCallback={handleContentCallback} />
       {/* v2: <AboutReact /> */}
       {/* Step 23 - Components - Create the conditional rendering for Home and About */}
@@ -43,8 +47,11 @@ export default function App() {
       {showContent === 'Home' &&
         <Home />
       }
-      {showContent === 'About' &&
+      {showContent === 'About' && 
         <AboutReact />
+      }
+      {showContent === 'Tech' &&
+        <SupportingTech />
       }
       <Footer />
     </div>
