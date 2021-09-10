@@ -9,8 +9,13 @@ import bannerImage from '../../images/react-components-props.png'
 //Step 9 - Components - import the intro component as well as the introImage...add the Intro component in the return.
 import Intro from '../Intro'
 import introImage from '../../images/componentIntro.png'
+//Step 2 - AboutComponents - import and render the FunctionalComponents component, passing the helloWorld prop in the call.
+import FunctionalComponents from './FunctionalComponents'
+//Step 5 - AboutComponents - import and render the ClassComponents component in the render below.
+import ClassComponents from './ClassComponents'
 
 export default function AboutReact() {
+
     return(
         <section className="components">
             {/* v1: <h1>Hello from About React!</h1> */}
@@ -22,7 +27,7 @@ export default function AboutReact() {
                 blurb={
                     <React.Fragment>
                         <p>
-                            In React, the UI is broken down into small pieces and placed in components. These are reusable and you can have components nestedx  inside of other components (called a Component Tree). Think of components like an image tag:
+                            In React, the UI is broken down into small pieces and placed in components. These are reusable and you can have components nested  inside of other components (called a Component Tree). Think of components like an image tag:
                             <br />
                             <br />
                             <code>
@@ -37,6 +42,10 @@ export default function AboutReact() {
                     </React.Fragment>
                 }
                 />
+
+                <FunctionalComponents helloWorld='Hello from the AboutReact Component!' />
+
+                <ClassComponents />
         </section>
     )
 }

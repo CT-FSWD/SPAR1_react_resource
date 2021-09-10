@@ -5,12 +5,12 @@
 //            <button className="navbar-brand">
 //                ReactJS
 //                <img src={logo} alt="React logo" />
-//            </button>
+//            </button>      
 //        </nav>
 //    </header>
 
 //Step 19 - Components - add useState to the imports
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 //Images in React development - In React components, if we want to use an image as part of the UI, we must first import the image into the file. Below we import an image and give it a name, so we can easily refer to it in the src for an image tag.
 import logo from '../images/logo192.png'
 
@@ -19,11 +19,11 @@ export default function Header(props) {
     const [toggleNav, setToggleNav] = useState(false);
 
     const handleContentChange = (content) => {
-        //Below we use the handleContentCallback function to communicate back to the App component that the user wants to see specific content.
-        props.handleContentCallback(content);
+        //Below we use the setShowContent function to communicate back to the App component that the user wants to see specific content.
+        props.setShowContent(content);
         //Next we write code that will close the navigation menu and scroll to the top of the page.
         setToggleNav(false);
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     return (
         <header>
@@ -50,10 +50,13 @@ export default function Header(props) {
                         <ul>
                             <li onClick={() => handleContentChange('Home')}>Home</li>
                             <li onClick={() => handleContentChange('About')}>About</li>
+                            {/* Step 4 - Functions - Create the link in the navigation */}
+                            <li onClick={() => handleContentChange('Resources')}>Resources</li>
                             <li onClick={() => handleContentChange('Tech')}>Supporting Tech</li>
                         </ul>
                     </div>
                 }
+
             </nav>
         </header>
     )

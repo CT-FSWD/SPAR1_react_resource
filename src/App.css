@@ -86,7 +86,7 @@ nav div.hamburger-outer {
 }
 
 nav div.hamburger-outer:hover {
-    cursor: pointer;
+    cursor:crosshair;
 }
 
 nav div.hamburger-inner {
@@ -121,13 +121,15 @@ div.menu {
     position: fixed;
     top: 0;
     right: 0;
-    width: 400px;
+    width: 450px;
     height: 100%;
     background: linear-gradient(to top, rgb(241, 52, 84), rgb(247, 130, 20));
     z-index: 1000;
     padding: 2em;
     font-family: 'Train One', cursive;
+    transition: 150ms;
 }
+
 
 button.close-menu {
     position: absolute;
@@ -139,14 +141,12 @@ button.close-menu {
 }
 
 
-
-
 button.close-menu:hover,
 div.menu ul li:hover,
 a.navbar-brand:hover {
     text-decoration: none;
     color: rgb(100, 100, 100);
-    cursor: pointer;
+    cursor: crosshair;
 
 }
 
