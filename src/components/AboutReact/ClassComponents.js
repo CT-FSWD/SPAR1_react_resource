@@ -21,6 +21,18 @@ export default class ClassComponents extends Component {
     handleChange = (e) => {
         this.setState({ userName: e });
     }
+
+    //Step 3 - Lifecycle - Create the two lifecycle methods below.
+     //Below is one of the lifecycle methods for class components. ComponentDidMount is invoked each time the component mounts in the virtual DOM.
+     componentDidMount = () => {
+        console.log('ReactTerms Mounted');
+        //Fetch data here
+    }
+    //Step 15 - Terms
+    //Like the componentDidMount() is a lifecycle method for the mounting of a component, componentWillUnmount is invoked when a component is removed from the virtual DOM
+    componentWillUnmount = () => {
+        console.log('ReactTerms Unmounted');
+    }
     
     render() {
         return (

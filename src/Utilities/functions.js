@@ -1,3 +1,7 @@
+//Step 7 - Read Data - npm install axios, import axios, create fetchData below
+import axios from 'axios'
+
+
 //Step 9 - Functions - Create addTwoNumbers
 //Using the export keyword for each of the functions below will allow us to import and call upon those functions in other files in the codebase. This is known as a JavaScript Module, where we can import specific JS objects into other files for use. It is good practice to keep sensitive functionality in its own file. It allows for security in connecting to data and provides a little bit more simplicity in maintaining/debugging the functionality.
 
@@ -46,4 +50,11 @@ export function showFavPlace(place){
     }
 
     return message;
+}
+
+
+//Below we add the async function to allow the functionality to run async to any other functionality. Notice the await keyword below, as this allows us to wait for the promise of data to be returned before returning the JSON data from the Resources API
+export async function fetchData(){
+    const response = await axios.get('https://api.jamesrcaldwell.com/api/resources/');
+    return response;
 }

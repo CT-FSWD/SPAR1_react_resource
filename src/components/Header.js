@@ -50,8 +50,10 @@ export default function Header(props) {
                         <ul>
                             <li onClick={() => handleContentChange('Home')}>Home</li>
                             <li onClick={() => handleContentChange('About')}>About</li>
-                            {/* Step 4 - Functions - Create the link in the navigation */}
+                            {/* Step 4 - Functions - Create the link below */}
                             <li onClick={() => handleContentChange('Resources')}>Resources</li>
+                            {/* Step 4 - Terms - Create the link below */}
+                            <li onClick={() => handleContentChange('Terms')}>Terms</li>
                             <li onClick={() => handleContentChange('Tech')}>Supporting Tech</li>
                         </ul>
                     </div>

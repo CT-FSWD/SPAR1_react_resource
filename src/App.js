@@ -21,6 +21,9 @@ import SupportingTech from './components/SupportingTech/SupportingTech'
 //Step 3 - Functions - Import and create the conditional rendering for Resources
 import Resources from './components/Resources/Resources'
 
+//Step 3 - Terms - Import and create the conditional rendering for ReactTerms
+import ReactTerms from './components/ReactTerms/ReactTerms'
+
 //The export keyword below makes the App component accessible in other files in this application. Think of export much like the public keyword in a C# class.
 export default function App() {
   //Step 18 - Components - create the hook, callback function, and add the callback function as a prop in the Header component below.
@@ -57,6 +60,9 @@ export default function App() {
       }
       {showContent === 'Tech' &&
         <SupportingTech />
+      }
+      {showContent === 'Terms' &&
+        <ReactTerms />
       }
       <Footer />
     </div>
