@@ -1,3 +1,4 @@
+//Step 6 - Terms - MINILAB
 import React, { useState } from 'react'
 
 export default function SingleTerm(props) {

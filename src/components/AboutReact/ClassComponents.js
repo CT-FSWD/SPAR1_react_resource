@@ -28,7 +28,6 @@ export default class ClassComponents extends Component {
         console.log('ReactTerms Mounted');
         //Fetch data here
     }
-    //Step 15 - Terms
     //Like the componentDidMount() is a lifecycle method for the mounting of a component, componentWillUnmount is invoked when a component is removed from the virtual DOM
     componentWillUnmount = () => {
         console.log('ReactTerms Unmounted');

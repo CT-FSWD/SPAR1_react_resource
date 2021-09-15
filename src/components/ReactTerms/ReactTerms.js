@@ -35,7 +35,8 @@ export default function ReactTerms() {
                     </p>
                 </React.Fragment>
                 } />
-            {/* Step 5 - Terms - Create  */}
+                <hr />
+            {/* Step 5 - Terms - Create the article.termsGallery */}
             <article className="termsGallery">
                 {terms.map(x =>
                     <SingleTerm key={x.TermId} term={x.Term} definition={x.Definition}/>
